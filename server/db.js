@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize')
 
 // module.exports = new Sequelize('postgresql://postgres:postgres@localhost:5432/treasurer')
-module.exports = new Sequelize('postgresql://uypzt90fsdwfgiujtoeh:C8i0YWyO6Ow6g54vO0Js@bqzpfco5blcn7yiewsoz-postgresql.services.clever-cloud.com:5432/bqzpfco5blcn7yiewsoz')
+module.exports = new Sequelize(process.env.PG_KEY)
 
 
 // module.exports = new Sequelize(
