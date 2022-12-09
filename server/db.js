@@ -1,8 +1,6 @@
 const { Sequelize } = require('sequelize')
 
-// module.exports = new Sequelize('postgresql://postgres:postgres@localhost:5432/treasurer')
 module.exports = new Sequelize(process.env.PG_KEY)
-
 
 // module.exports = new Sequelize(
 //     process.env.DB_NAME,
