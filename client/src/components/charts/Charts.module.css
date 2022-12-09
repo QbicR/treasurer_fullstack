@@ -1,0 +1,54 @@
+.charts_card {
+    width: 1140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #121212;
+    background-color: #363636;
+    border-radius: 10px;
+    height: 320px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.chart_btns {
+    position: absolute;
+    display: grid;
+    gap: 8px;
+    top: 10px;
+    left: 10px;
+}
+
+.charts {
+    display: flex;
+}
+
+.charts h3 {
+    font-size: 24px;
+}
+
+.chart_btn {
+    cursor: pointer;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 14px;
+    background: #262626;
+    color: #8e8e8e;
+    border: 0;
+}
+
+.chart_btn:hover {
+    background: #8e8e8e;
+    color: #262626;
+    transition: 0.25s;
+}
+
+.chart_btn_active {
+    font-size: 14px;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 14px;
+    border: 0;
+    background: #8e8e8e;
+    color: #262626;
+}

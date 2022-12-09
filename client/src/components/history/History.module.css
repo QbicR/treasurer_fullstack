@@ -1,0 +1,207 @@
+.history_filter {
+    padding: 10px;
+    width: 100%;
+}
+
+.search {
+    position: relative;
+}
+
+.search input {
+    padding-left: 100px;
+    background-color: #262626;
+    border: 1px solid #363636;
+    margin: 5px 0;
+    width: 100%;
+    color: #cfba9d;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 14px;
+    caret-color: #cfba9d;
+}
+
+.search label {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    translate: 0 -50%;
+    font-size: 14px;
+    color: #8e8e8e;
+    pointer-events: none;
+    transition: 0.4s;
+    position: absolute;
+}
+
+.history_type_filter {
+    margin-bottom: 10px;
+    ;
+    display: flex;
+    justify-content: space-around;
+}
+
+.history_filter_btn,
+.page_btn {
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 16px;
+    border-radius: 14px;
+    background: #262626;
+    color: #8e8e8e;
+    border: 0;
+    margin-right: 5px;
+    margin-top: 15px;
+}
+
+.history_filter_btn_active,
+.page_btn_active {
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 16px;
+    border-radius: 14px;
+    background: #8e8e8e;
+    color: #262626;
+    border: 0;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.history_filter_btn:hover,
+.page_btn:hover {
+    background: #8e8e8e;
+    color: #262626;
+    transition: 0.25s;
+}
+
+.card_filter,
+.operation_type_filter {
+    display: inline-flex;
+}
+
+.history_item {
+    background: #262626;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #262626;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 16px;
+    height: 80px;
+}
+
+.history_image {
+    display: flex;
+}
+
+.history_item_info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.history_type_info {
+    text-align: center;
+}
+
+.history_item_info h1,
+h2 {
+    text-align: center;
+    width: 300px;
+    font-size: 22px;
+}
+
+
+.history_type_info h5 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.history_type_info p {
+    font-size: 12px;
+    color: #cfba9d;
+}
+
+.delete_history_item_btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #363636;
+    color: #8e8e8e;
+    font-size: 21px;
+}
+
+.delete_history_item_btn:hover {
+    background: #8e8e8e;
+    color: #363636;
+    transition: 0.25s;
+}
+
+.panel {
+    display: grid;
+}
+
+.card {
+    position: relative;
+    width: 425px;
+    height: 270px;
+    padding: 30px;
+    border: 1px solid #121212;
+    border-radius: 16px;
+    background: #363636;
+}
+
+.card_value {
+    font-size: 40px;
+    padding: 50px 0 15px;
+    text-align: center;
+    color: bisque;
+}
+
+.card_create_date {
+    font-size: 14px;
+    padding: 10px 0;
+    text-align: center;
+    color: #cfba9d
+}
+
+.card_name_type {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.card_name {
+    font-size: 24px;
+    color: #cfba9d
+}
+
+.card_type {
+    font-size: 14px;
+    color: #cfba9d
+}
+
+.card_comment {
+    width: 425px;
+    margin-top: 15px;
+    padding: 30px;
+    border: 1px solid #121212;
+    color: #cfba9d;
+    border-radius: 16px;
+    background: #363636;
+}
+
+.history_pagination {
+    left: 40px;
+    bottom: 15px;
+    position: absolute;
+}
+
+.pagination {
+    margin-top: 10px;
+    margin-right: 6px;
+    display: inline-flex;
+}

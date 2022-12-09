@@ -1,0 +1,381 @@
+/* main page */
+
+.main_page {
+    width: 1140px;
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+
+/* history page */
+
+.history_card {
+    position: relative;
+    width: 1140px;
+    height: 830px;
+    border: 1px solid #121212;
+    background: #363636;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* user page */
+
+.user_page_card {
+    width: 1140px;
+    height: 830px;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.user_info {
+    display: grid;
+    justify-content: center;
+    width: 410px;
+    height: 480px;
+    border: 1px solid #121212;
+    background: #363636;
+    border-radius: 10px;
+}
+
+.user_info h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+.user_info h3 {
+    margin-bottom: 8px;
+    align-items: flex-end;
+    font-size: 16px;
+    color: #cfba9d
+}
+
+.user_info p {
+    align-items: flex-end;
+    font-size: 16px;
+    color: #cfba9d
+}
+
+.user_image {
+    background-size: cover;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    border: 1px solid #121212;
+    border-radius: 50%;
+}
+
+.update_user_photo {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_file {
+    position: relative;
+    display: inline-block;
+}
+
+.input_file span,
+.update_photo_btn {
+    cursor: pointer;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 14px;
+    background: #262626;
+    color: #8e8e8e;
+    border: 0;
+    margin-right: 7px;
+}
+
+.input_file input {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+}
+
+.input_file:hover span {
+    background: #8e8e8e;
+    color: #262626;
+    transition: 0.25s;
+}
+
+.update_photo_btn:hover {
+    background: #8e8e8e;
+    color: #262626;
+    transition: 0.25s;
+}
+
+.cards {
+    border: 1px solid #121212;
+    background: #363636;
+    border-radius: 10px;
+    padding: 10px;
+    height: 480px;
+    width: 410px;
+}
+
+.cards_card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    scroll-snap-type: x proximity;
+    margin-bottom: 10px;
+}
+
+.cards_card h4 {
+    font-size: 18px;
+}
+
+.cards_list {
+    border-radius: 10px;
+    height: 405px;
+    scroll-snap-type: x proximity;
+    overflow: auto;
+}
+
+.cards_list::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* card page */
+
+.card_page {
+    width: 1140px;
+    height: 830px;
+}
+
+.card_page_card {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.panel {
+    display: grid;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.card {
+    position: relative;
+    display: inline-block;
+    width: 425px;
+    height: 270px;
+    text-align: left;
+    padding: 30px;
+    border: 1px solid #121212;
+    color: bisque;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background: #363636;
+}
+
+.card_value {
+    font-size: 40px;
+    padding: 50px 0 15px;
+    text-align: center;
+}
+
+.card_create_date {
+    font-size: 14px;
+    padding: 10px 0;
+    text-align: center;
+    color: #cfba9d
+}
+
+.card_name_type {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.card_name {
+    font-size: 24px;
+    color: #cfba9d
+}
+
+.card_type {
+    font-size: 14px;
+    color: #cfba9d
+}
+
+.card_comment {
+    display: inline-block;
+    width: 425px;
+    height: 80px;
+    text-align: left;
+    margin-top: 15px;
+    padding: 30px;
+    border: 1px solid #121212;
+    color: #cfba9d;
+    border-radius: 20px;
+    background: #363636;
+}
+
+.card_page_operations_card {
+    border: 1px solid #121212;
+    background: #363636;
+    border-radius: 10px;
+    padding: 10px;
+    height: 480px;
+    scroll-snap-type: x proximity;
+    width: 410px;
+}
+
+.card_page_operations_card h4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    scroll-snap-type: x proximity;
+    margin-bottom: 10px;
+}
+
+.card_list {
+    border-radius: 10px;
+    height: 405px;
+    scroll-snap-type: x proximity;
+    overflow: auto;
+}
+
+.card_list::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* auth page */
+
+.auth_page {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 80%;
+}
+
+.description {
+    display: grid;
+    gap: 10px;
+    width: 600px;
+}
+
+.description p {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.description img {
+    height: 430px;
+}
+
+.login {
+    max-width: 500px;
+    margin: auto;
+    border: 1px solid #121212;
+    border-radius: 10px;
+    padding: 60px 80px;
+    background-color: #363636;
+}
+
+.login>h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    color: bisque;
+    font-size: 20px;
+}
+
+.form {
+    margin: 0;
+    display: grid;
+    gap: 20px;
+}
+
+.textbox {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.textbox input {
+    background-color: #262626;
+    border: 1px solid #363636;
+    color: bisque;
+    width: 350px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 14px;
+    padding-left: 40px;
+    caret-color: bisque;
+}
+
+input:focus {
+    outline: 0
+}
+
+.textbox label {
+    position: absolute;
+    top: 50%;
+    left: 48px;
+    translate: 0 -50%;
+    font-size: 16px;
+    color: #8e8e8e;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.textbox p {
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 40px;
+    color: #cfba9d;
+    font-size: 12px;
+}
+
+.textbox label {
+    translate: -40px -40px;
+    scale: 0.775;
+}
+
+input:focus~label {
+    color: bisque
+}
+
+.auth_submit {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.auth_link {
+    color: #8e8e8e;
+    font-size: 14px;
+}
+
+.auth_button {
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 16px;
+    border-radius: 14px;
+    background: #262626;
+    color: #8e8e8e;
+    border: 0;
+}
+
+.auth_button:hover {
+    background: #8e8e8e;
+    color: #262626;
+    transition: 0.25s;
+}

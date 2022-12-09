@@ -1,0 +1,6 @@
+export const MAIN_ROUTE = '/'
+export const HISTORY_ROUTE = '/history'
+export const USER_ROUTE = '/user'
+export const CARD_ROUTE = '/card'
+export const REGISTRATION_ROUTE = '/registration'
+export const LOGIN_ROUTE = '/login'
