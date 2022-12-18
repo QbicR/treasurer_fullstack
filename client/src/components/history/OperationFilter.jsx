@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react-lite';
 import React from 'react';
 import PropTypes from 'prop-types'
-import classes from './History.module.css'
+import classes from './History.module.scss'
 
 const types = [
     { id: 1, name: 'Пополнение', type: 'replenishment' },

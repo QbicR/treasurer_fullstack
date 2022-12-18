@@ -94,6 +94,9 @@ export const logIn = (login, password) => async (dispatch) => {
         const data = await authService.logIn(login, password)
         dispatch(authRequestSuccess(data.userId))
     } catch (error) {
+        if (error.response === undefined) {
+            alert('Сервер временно не работает. Попробуйте позже')
+        }
         alert(error.response.data.message)
         dispatch(authRequestFailer(error.response.data.message))
     }

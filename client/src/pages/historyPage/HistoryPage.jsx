@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { observer } from 'mobx-react-lite';
 import jwt_decode from 'jwt-decode'
-import HistoryPagination from '../components/history/HistoryPagination';
-import HistoryList from '../components/history/HistoryList';
-import HistoryFilter from '../components/history/HistoryFilter';
-import classes from './Pages.module.css'
+import HistoryPagination from '../../components/history/HistoryPagination';
+import HistoryList from '../../components/history/HistoryList';
+import HistoryFilter from '../../components/history/HistoryFilter';
+import classes from './HistoryPage.module.scss'
 import { useDispatch, useSelector } from 'react-redux';
-import { getCards, loadCardList, updateCard } from '../store/cards';
-import { getOperations, loadOperationList } from '../store/operations';
-import { paginate } from '../utils/paginate';
-import { search } from '../utils/search';
+import { getCards, loadCardList, updateCard } from '../../store/cards';
+import { getOperations, loadOperationList } from '../../store/operations';
+import { paginate } from '../../utils/paginate';
+import { search } from '../../utils/search';
 
 const HistoryPage = observer(() => {
     const token = localStorage.getItem('token')
@@ -80,30 +80,33 @@ const HistoryPage = observer(() => {
 
     return (
         <div className={classes.history_card}>
-            <HistoryFilter
-                cards={cards}
-                setSelectedCard={setSelectedCard}
-                setSelectedType={setSelectedType}
-                handleReset={handleReset}
-                setFilter={setFilter}
-                filter={filter}
-                operationHistoryType={operationHistoryType}
-                setOperationHistoryType={setOperationHistoryType}
-                cardHistoryId={cardHistoryId}
-                setCardHistoryId={setCardHistoryId}
-                setCurrentPage={setCurrentPage}
-            />
-            <HistoryList
-                operations={operCrop}
-                deleteOperationItem={deleteOperation}
-                userId={id}
-            />
-            <HistoryPagination
-                totalCount={searchedHistory?.length}
-                limit={limit}
-                currentPage={currentPage}
-                setCurrentPage={setCurrentPage}
-            />
+            <div className={classes.history_card_list}>
+                <HistoryFilter
+                    cards={cards}
+                    setSelectedCard={setSelectedCard}
+                    setSelectedType={setSelectedType}
+                    handleReset={handleReset}
+                    setFilter={setFilter}
+                    filter={filter}
+                    operationHistoryType={operationHistoryType}
+                    setOperationHistoryType={setOperationHistoryType}
+                    cardHistoryId={cardHistoryId}
+                    setCardHistoryId={setCardHistoryId}
+                    setCurrentPage={setCurrentPage}
+                />
+                <HistoryList
+                    operations={operCrop}
+                    deleteOperationItem={deleteOperation}
+                    userId={id}
+                />
+                <HistoryPagination
+                    totalCount={searchedHistory?.length}
+                    limit={limit}
+                    currentPage={currentPage}
+                    setCurrentPage={setCurrentPage}
+                />
+            </div>
+
         </div>
     );
 });

@@ -1,30 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import { observer } from 'mobx-react-lite';
+import React, {useState, useEffect} from 'react';
+import {observer} from 'mobx-react-lite';
 import jwt_decode from 'jwt-decode'
 import * as yup from 'yup'
 import 'moment/locale/ru'
-import { replenishmentTypes, writeOffTypes } from '../../utils/operationTypes'
+import {replenishmentTypes, writeOffTypes} from '../../utils/operationTypes'
 import PropTypes from 'prop-types'
-import classes from './Operations.module.css'
-import { useDispatch, useSelector } from 'react-redux';
-import { getCards, loadCardList } from '../../store/cards';
-import { createOperation } from '../../store/operations';
+import classes from './Operations.module.scss'
+import {useDispatch, useSelector} from 'react-redux';
+import {getCards, loadCardList} from '../../store/cards';
+import {createOperation} from '../../store/operations';
+import AuthInput from "../UI/inputs/authInput/AuthInput";
 
 const OperationForm = observer(({
-    modal,
-    type,
-    operation,
-    categoryActive,
-    setCategoryActive,
-    cardActive,
-    setCardActive,
-    value,
-    setValue,
-    comment,
-    setComment
-}) => {
+                                    modal,
+                                    type,
+                                    operation,
+                                    categoryActive,
+                                    setCategoryActive,
+                                    cardActive,
+                                    setCardActive,
+                                    value,
+                                    setValue,
+                                    comment,
+                                    setComment
+                                }) => {
     const token = localStorage.getItem('token')
-    const { id } = jwt_decode(token)
+    const {id} = jwt_decode(token)
     const [cardId, setCardId] = useState('')
     const [cardName, setCardName] = useState('')
     const [category, setCategory] = useState()
@@ -38,6 +39,7 @@ const OperationForm = observer(({
     cards && (sortedCards = [...cards].sort((x, y) => x.id - y.id))
 
     const dispatch = useDispatch()
+
     useEffect(() => {
         dispatch(loadCardList(id))
     }, [])
@@ -61,7 +63,7 @@ const OperationForm = observer(({
         validateScheme
             .validate(obj)
             .then(() => setErrors({}))
-            .catch((err) => setErrors({ [err.path]: err.message }))
+            .catch((err) => setErrors({[err.path]: err.message}))
         return Object.keys(errors).length === 0
     }
 
@@ -141,7 +143,7 @@ const OperationForm = observer(({
                     </div>
                 </div>
             }
-            <div >
+            <div>
                 <h3>Карта</h3>
                 <div className={classes.card_list}>
                     {cards &&
@@ -159,7 +161,7 @@ const OperationForm = observer(({
             </div>
             <form className={classes.operation_form}>
                 <div className={classes.operation_value}>
-                    <input
+                    <AuthInput
                         value={value}
                         onChange={event => setValue(Number((event.target.value).trim()))}
                         type='number'
@@ -169,7 +171,7 @@ const OperationForm = observer(({
                     {(value !== '' && errors.value) && <p>{errors.value}</p>}
                 </div>
                 <div className={classes.operation_comment}>
-                    <input
+                    <AuthInput
                         value={comment}
                         onChange={event => setComment((event.target.value).trim())}
                         type='text'
@@ -184,7 +186,7 @@ const OperationForm = observer(({
             >
                 Добавить
             </button>
-        </div >
+        </div>
     );
 });
 

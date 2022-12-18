@@ -4,7 +4,7 @@ import PieChart from './pieChart/PieChart';
 import StandardBar from './standardBar/StandardBar';
 import { greenColors, redColors } from '../../utils/chartColors';
 import PropTypes from 'prop-types'
-import classes from './Charts.module.css'
+import classes from './Charts.module.scss'
 
 const Charts = observer(({ operations }) => {
     const [button, setButton] = useState(true)

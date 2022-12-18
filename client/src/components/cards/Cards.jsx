@@ -3,7 +3,7 @@ import { observer } from 'mobx-react-lite';
 import CardForm from './CardForm';
 import CardsList from './CardsList';
 import PropTypes from 'prop-types'
-import classes from './Cards.module.css'
+import classes from './Cards.module.scss'
 
 const Cards = observer(({ cards, userId }) => {
     const [modal, setModal] = useState(false)

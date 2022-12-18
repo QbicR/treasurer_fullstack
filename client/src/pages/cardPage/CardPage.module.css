@@ -1,0 +1,192 @@
+.card_page {
+  padding: 10px;
+  justify-content: center;
+  background: #262626;
+}
+
+.card_page_card {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.panel {
+  display: grid;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+  width: 425px;
+  height: 270px;
+  text-align: left;
+  padding: 30px;
+  border: 1px solid #121212;
+  color: bisque;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: #363636;
+  margin-right: 80px;
+}
+
+.card_value {
+  font-size: 40px;
+  padding: 50px 0 15px;
+  text-align: center;
+}
+
+.card_create_date {
+  font-size: 14px;
+  padding: 10px 0;
+  text-align: center;
+  color: #cfba9d;
+}
+
+.card_name_type {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.card_name {
+  font-size: 24px;
+  color: #cfba9d;
+}
+
+.card_type {
+  font-size: 14px;
+  color: #cfba9d;
+}
+
+.card_comment {
+  display: inline-block;
+  width: 425px;
+  height: 80px;
+  text-align: left;
+  margin-top: 15px;
+  padding: 30px;
+  border: 1px solid #121212;
+  color: #cfba9d;
+  border-radius: 20px;
+  background: #363636;
+}
+
+.card_page_operations_card {
+  border: 1px solid #121212;
+  background: #363636;
+  border-radius: 10px;
+  padding: 10px;
+  height: 480px;
+  scroll-snap-type: x proximity;
+  width: 410px;
+}
+
+.card_page_operations_card h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  scroll-snap-type: x proximity;
+  margin-bottom: 10px;
+}
+
+.card_list {
+  border-radius: 10px;
+  height: 405px;
+  scroll-snap-type: x proximity;
+  overflow: auto;
+}
+
+.card_list::-webkit-scrollbar {
+  width: 0;
+}
+
+.card_page_charts {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .card_page {
+    width: 100%;
+    display: block;
+    padding: 5px;
+    margin-top: 5px;
+  }
+  .card_page_card {
+    margin-top: 5px;
+    display: grid;
+    justify-content: space-around;
+  }
+  .panel {
+    justify-content: center;
+  }
+  .card {
+    width: 100%;
+    height: 170px;
+    padding: 15px 45px;
+    text-align: center;
+  }
+  .card_value {
+    font-size: 30px;
+    padding: 0;
+  }
+  .card_create_date {
+    font-size: 14px;
+    padding: 10px 0;
+    text-align: center;
+    color: #cfba9d;
+  }
+  .card_name_type {
+    height: 20px;
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .card_name {
+    font-size: 16px;
+    color: #cfba9d;
+  }
+  .card_type {
+    font-size: 14px;
+    color: #cfba9d;
+  }
+  .card_page_operations_card {
+    justify-content: center;
+    padding: 5px;
+    height: 350px;
+    scroll-snap-type: x proximity;
+    max-width: 700px;
+    width: 100%;
+  }
+  .card_page_operations_card h4 {
+    display: block;
+    text-align: center;
+  }
+  .card_list {
+    border-radius: 10px;
+    height: 80%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .card_page {
+    display: block;
+  }
+  .operations {
+    height: 100%;
+    display: block;
+    width: 100%;
+  }
+  .card_page_charts {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=CardPage.module.css.map */

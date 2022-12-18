@@ -1,18 +1,18 @@
-import { observer } from 'mobx-react-lite';
-import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import Charts from '../components/charts/Charts';
-import OperationsList from '../components/operations/OperationsList';
+import {observer} from 'mobx-react-lite';
+import React, {useEffect} from 'react';
+import {useParams} from 'react-router-dom';
+import Charts from '../../components/charts/Charts';
+import OperationsList from '../../components/operations/OperationsList';
 import jwt_decode from 'jwt-decode'
-import classes from './Pages.module.css'
-import { useDispatch, useSelector } from 'react-redux';
-import { getOperations, loadOperationList } from '../store/operations';
-import { getOneCard, loadCard } from '../store/cards';
+import classes from './CardPage.module.scss'
+import {useDispatch, useSelector} from 'react-redux';
+import {getOperations, loadOperationList} from '../../store/operations';
+import {getOneCard, loadCard} from '../../store/cards';
 
 const CardPage = observer(() => {
-    const { id: cardId } = useParams()
+    const {id: cardId} = useParams()
     const token = localStorage.getItem('token')
-    const { id } = jwt_decode(token)
+    const {id} = jwt_decode(token)
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -26,7 +26,7 @@ const CardPage = observer(() => {
     return (
         <div className={classes.card_page}>
             <div className={classes.card_page_card}>
-                <div>
+                <div className={classes.card_info}>
                     {card &&
                         <div className={classes.panel}>
                             <div className={classes.card}>
@@ -49,10 +49,12 @@ const CardPage = observer(() => {
                     </div>
                 </div>
             </div>
-            <Charts
-                operations={operations}
-            />
-        </div >
+            <div className={classes.card_page_charts}>
+                <Charts
+                    operations={operations}
+                />
+            </div>
+        </div>
     );
 });
 

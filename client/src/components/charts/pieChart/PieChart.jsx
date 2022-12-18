@@ -1,7 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
 import PieChart, { Legend, Series, Tooltip, Label, Animation, Font } from 'devextreme-react/pie-chart'
-import classes from './pieChart.module.css'
+import classes from './pieChart.module.scss'
 import CenterTemplate from './CenterTemplate';
 import PropTypes from 'prop-types'
 

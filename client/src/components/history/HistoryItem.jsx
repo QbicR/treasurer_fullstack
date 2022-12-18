@@ -4,7 +4,7 @@ import { ArrowDown, ArrowUp } from 'iconsax-react'
 import Modal from '../UI/modal/Modal';
 import jwt_decode from 'jwt-decode'
 import PropTypes from 'prop-types'
-import classes from './History.module.css'
+import classes from './History.module.scss'
 import { useDispatch } from 'react-redux';
 import { removeOperation } from '../../store/operations';
 

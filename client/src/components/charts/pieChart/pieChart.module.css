@@ -1,4 +1,13 @@
 #pie {
-    height: 280px;
-    width: 550px;
+  height: 280px;
+  width: 550px;
 }
+
+@media (max-width: 1200px) {
+  #pie {
+    height: 250px;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=pieChart.module.css.map */

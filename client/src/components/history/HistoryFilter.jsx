@@ -3,7 +3,8 @@ import React from 'react';
 import CardFilter from './CardFilter';
 import OperationFilter from './OperationFilter';
 import PropTypes from 'prop-types'
-import classes from './History.module.css'
+import classes from './History.module.scss'
+import AuthInput from "../UI/inputs/authInput/AuthInput";
 
 const HistoryFilter = observer(({
     setCurrentPage,
@@ -28,7 +29,7 @@ const HistoryFilter = observer(({
     return (
         <div className={classes.history_filter}>
             <div className={classes.search}>
-                <input
+                <AuthInput
                     value={filter.search}
                     onChange={event => handleSearch(event)}
                 />

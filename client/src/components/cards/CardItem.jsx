@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Card } from 'iconsax-react'
 import { CARD_ROUTE } from '../../utils/consts';
 import PropTypes from 'prop-types'
-import classes from './Cards.module.css'
+import classes from './Cards.module.scss'
 import { useDispatch, useSelector } from 'react-redux';
 import { removeCard } from '../../store/cards';
 import jwt_decode from 'jwt-decode'

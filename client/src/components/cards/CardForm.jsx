@@ -4,9 +4,10 @@ import * as yup from 'yup'
 import 'moment/locale/ru'
 import { cardTypes } from '../../utils/cardTypes';
 import PropTypes from 'prop-types'
-import classes from './Cards.module.css'
+import classes from './Cards.module.scss'
 import { useDispatch } from 'react-redux';
 import { createCard } from '../../store/cards';
+import AuthInput from "../UI/inputs/authInput/AuthInput";
 
 const CardForm = observer(({ modal, userId, typeActive, setTypeActive, name, setName, value, setValue }) => {
     const [type, setType] = useState('')
@@ -84,7 +85,7 @@ const CardForm = observer(({ modal, userId, typeActive, setTypeActive, name, set
             </div>
             <form className={classes.card_form}>
                 <div className={classes.modal_card_name}>
-                    <input
+                    <AuthInput
                         value={name}
                         onChange={event => setName((event.target.value).trim())}
                         type='text'
@@ -92,7 +93,7 @@ const CardForm = observer(({ modal, userId, typeActive, setTypeActive, name, set
                     <label>Название</label>
                 </div>
                 <div className={classes.modal_card_value}>
-                    <input
+                    <AuthInput
                         value={value}
                         onChange={event => setValue(Number((event.target.value).trim()))}
                         type='number'

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Chart, Series, Legend, Tooltip, Animation, ValueAxis, Label, CommonAxisSettings, Aggregation, Grid, ArgumentAxis, Font } from "devextreme-react/chart";
-import classes from './standartBar.module.css'
+import classes from './standartBar.module.scss'
 import { observer } from 'mobx-react-lite';
 import PropTypes from 'prop-types'
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
 import PropTypes from 'prop-types'
-import classes from './History.module.css'
+import classes from './History.module.scss'
 
 const HistoryPagination = observer(({ totalCount, limit, currentPage, setCurrentPage }) => {
     const pageCount = Math.ceil(totalCount / limit)

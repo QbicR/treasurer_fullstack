@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { SliderData } from './SliderData';
 import { ArrowCircleRight2, ArrowCircleLeft2 } from 'iconsax-react'
-import classes from './Slider.module.css'
+import classes from './Slider.module.scss'
 
 const ImageSlider = () => {
     const [current, setCurrent] = useState(0);

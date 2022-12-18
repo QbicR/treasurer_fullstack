@@ -2,7 +2,7 @@ import React from 'react';
 import { observer } from 'mobx-react-lite';
 import OperationWithMoney from './OperationWithMoney';
 import PropTypes from 'prop-types'
-import classes from './Operations.module.css'
+import classes from './Operations.module.scss'
 import { useDispatch } from 'react-redux';
 import { updateCard } from '../../store/cards';
 

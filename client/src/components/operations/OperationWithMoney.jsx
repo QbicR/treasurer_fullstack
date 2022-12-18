@@ -3,7 +3,7 @@ import { observer } from 'mobx-react-lite';
 import OperationsList from './OperationsList';
 import OperationForm from './OperationForm';
 import PropTypes from 'prop-types'
-import classes from './Operations.module.css'
+import classes from './Operations.module.scss'
 
 const OperationWithMoney = observer(({
     operationsList,

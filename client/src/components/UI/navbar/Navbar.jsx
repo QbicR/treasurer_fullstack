@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { HISTORY_ROUTE, LOGIN_ROUTE, MAIN_ROUTE, USER_ROUTE } from '../../../utils/consts';
 import { observer } from 'mobx-react-lite'
 import userImg from '../../../img/user.png'
-import classes from './Navbar.module.css'
+import classes from './Navbar.module.scss'
 import jwt_decode from 'jwt-decode'
 import { useDispatch, useSelector } from 'react-redux';
 import { getIsLoggedIn, getUserInfo, loadUser, logOut } from '../../../store/user';
@@ -61,7 +61,7 @@ const Navbar = observer(() => {
         (auth) && (
             <div className={classes.navbar}>
                 <div className={classes.navbar_info}>
-                    <div >
+                    <div className={classes.navigate_btns}>
                         <button
                             className={activePage === 'Главная' ? classes.navbar_btn_active : classes.navbar_btn}
                             onClick={(handleMainPage)}
@@ -81,7 +81,7 @@ const Navbar = observer(() => {
                             <button
                                 className={classes.navbar_btn}
                                 onClick={() => logOutFromAcc()}
-                                disabled={(user === null || user === undefined)}
+                            // disabled={(user === null || user === undefined)}
                             >
                                 Выйти
                             </button>

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { observer } from 'mobx-react-lite';
 import jwt_decode from 'jwt-decode'
-import CardsList from '../components/cards/CardsList';
-import userImg from '../img/user.png'
-import classes from './Pages.module.css'
+import CardsList from '../../components/cards/CardsList';
+import userImg from '../../img/user.png'
+import classes from './UserPage.module.scss'
 import { useDispatch, useSelector } from 'react-redux';
-import { getCards, loadCardList } from '../store/cards';
-import { getUserInfo, loadUser, updateUser } from '../store/user';
-import { loadOperationList } from '../store/operations';
+import { getCards, loadCardList } from '../../store/cards';
+import { getUserInfo, loadUser, updateUser } from '../../store/user';
+import { loadOperationList } from '../../store/operations';
 
 const Userpage = observer(() => {
     const token = localStorage.getItem('token')

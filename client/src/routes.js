@@ -1,9 +1,9 @@
-import AuthPage from "./pages/AuthPage"
-import CardPage from "./pages/CardPage"
-import HistoryPage from "./pages/HistoryPage"
-import MainPage from "./pages/MainPage"
-import UserPage from "./pages/UserPage"
+import CardPage from "./pages/cardPage/CardPage"
+import HistoryPage from "./pages/historyPage/HistoryPage"
+import MainPage from "./pages/mainPage/MainPage"
+import UserPage from "./pages/userPage/UserPage"
 import { CARD_ROUTE, HISTORY_ROUTE, LOGIN_ROUTE, MAIN_ROUTE, REGISTRATION_ROUTE, USER_ROUTE } from "./utils/consts"
+import AuthPage from "./pages/authPage/AuthPage";
 
 export const authRoutes = [
     {
